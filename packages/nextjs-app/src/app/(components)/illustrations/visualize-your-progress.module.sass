@@ -1,0 +1,41 @@
+@keyframes leftBarWidth
+  0%
+    width: 0
+  100%
+    width: 204px
+
+@keyframes rightBarWidth
+  0%
+    width: 0
+  100%
+    width: 100px
+
+@keyframes fadeInTop
+  0%
+    opacity: 0
+    transform: scale(0)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+.animBarBefore
+  width: 0
+  transform: rotate(0deg)
+
+.animLeftBar
+  animation: leftBarWidth .6s 2.3s ease-in-out forwards
+
+.animRightBar
+  animation: rightBarWidth .4s 3.5s ease-in-out forwards
+
+.animLabelBefore
+  opacity: 0
+  transform: scale(0)
+  transform-origin: center top
+  transform-box: content-box
+
+.animLeftLabel
+  animation: fadeInTop .2s 3.1s ease-in-out forwards
+
+.animRightLabel
+  animation: fadeInTop .2s 3.9s ease-in-out forwards
