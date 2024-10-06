@@ -15,10 +15,7 @@ const  useAnimation = (animationElementRef: React.MutableRefObject<null | HTMLEl
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (!playAnimation) setPlayAnimation(true);
-          return;
         }
-
-        if (playAnimation) setPlayAnimation(false);
       });
     };
 

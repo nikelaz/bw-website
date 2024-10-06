@@ -17,7 +17,7 @@ type ButtonProps = Readonly<{
 
 const Button = (props: ButtonProps) => {
   const btnClassName = clsx(
-    'rounded-lg bg-prim hover:opacity-95 transition-opacity transition-scale text-white inline-flex w-fit text-24 leading-4 py-3 outline-prim outline-offset-4 focus:outline-2 active:scale-[0.98]',
+    'rounded-lg bg-prim hover:opacity-95 transition-opacity transition-scale text-white font-semibold inline-flex w-fit text-24 leading-4 py-3 outline-prim outline-offset-4 focus:outline-2 active:scale-[0.98]',
     props.className
   );
 
