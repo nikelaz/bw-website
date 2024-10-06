@@ -2,37 +2,15 @@
 
 import styles from './visualize-your-progress.module.sass';
 import {clsx} from 'clsx';
-import {useEffect, useRef, useState} from 'react';
+import {useRef} from 'react';
+import useAnimation from '../../hooks/use-animation';
 
 const  VisualizeYourProgressIllustration = () => {
-  const [playAnimation, setPlayAnimation] = useState(false);
   const animationElementRef = useRef();
-
-  useEffect(() => {
-    if (!animationElementRef.current) return;
-
-    const options = {
-      rootMargin: "0px",
-      threshold: 0,
-    };
-
-    const intersectionCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!playAnimation) setPlayAnimation(true);
-          return;
-        }
-
-        if (playAnimation) setPlayAnimation(false);
-      });
-    };
-
-    const observer = new IntersectionObserver(intersectionCallback, options);
-    observer.observe(animationElementRef.current);
-  }, [animationElementRef.current, setPlayAnimation]);
+  const playAnimation = useAnimation(animationElementRef);
 
   return (
-    <svg width="326" height="125" viewBox="0 0 326 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="absolute top-1/2 left-1/2 w-[86%] -translate-y-1/2 -translate-x-1/2" viewBox="0 0 326 125" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="0.294844" y="49.6955" width="324.405" height="25.515" rx="12.7575" stroke="#2C1F51" strokeWidth="1.215" strokeDasharray="2.43 2.43"/>
       <rect x="8.19238" y="56.378" width="204.12" height="12.15" rx="6.075" fill="#03318B" ref={animationElementRef} className={clsx(styles.animBarBefore, playAnimation && styles.animLeftBar)}/>
       <rect x="218.387" y="56.378" width="99.63" height="12.15" rx="6.075" fill="#7D1641"className={clsx(styles.animBarBefore, playAnimation && styles.animRightBar)}/>

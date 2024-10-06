@@ -1,38 +1,16 @@
 'use client';
 
 import styles from './organize-your-finances..module.sass';
-import {useEffect, useRef, useState} from 'react';
+import {useRef} from 'react';
 import {clsx} from 'clsx';
+import useAnimation from '../../hooks/use-animation';
 
 const OrganizeYourFinancesIllustration = () => {
-  const [playAnimation, setPlayAnimation] = useState(false);
   const animationElementRef = useRef();
-
-  useEffect(() => {
-    if (!animationElementRef.current) return;
-
-    const options = {
-      rootMargin: "0px",
-      threshold: 0,
-    };
-
-    const intersectionCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!playAnimation) setPlayAnimation(true);
-          return;
-        }
-
-        if (playAnimation) setPlayAnimation(false);
-      });
-    };
-
-    const observer = new IntersectionObserver(intersectionCallback, options);
-    observer.observe(animationElementRef.current);
-  }, [animationElementRef.current, setPlayAnimation]);
+  const playAnimation = useAnimation(animationElementRef);
 
   return (
-    <svg width="320" height="168" viewBox="0 0 342 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="absolute top-1/2 left-1/2 w-[86%] -translate-y-1/2 -translate-x-1/2" viewBox="0 0 342 168" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M342 26.0555H0V28.0555H342V26.0555Z" fill="#2C1F51" fillOpacity="0.3"/>
       <text fill="#2C1F51" xmlSpace="preserve" style={{whiteSpace: 'pre'}} fontSize="15" fontWeight="bold" letterSpacing="0em">
         <tspan x="10" y="13.0101">Expenses</tspan>

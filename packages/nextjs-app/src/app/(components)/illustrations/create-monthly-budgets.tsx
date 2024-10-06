@@ -1,40 +1,16 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
 import { clsx } from 'clsx';
+import { useRef } from 'react';
+import useAnimation from '../../hooks/use-animation';
 import styles from './create-monthly-budgets.module.sass';
 
 const CreateMonthlyBudgetsIllustration = () => {
-  const [playAnimation, setPlayAnimation] = useState(false);
-  const animationElementRef = useRef();
-
-  useEffect(() => {
-    if (!animationElementRef.current) return;
-    console.log('attach observer');
-
-    const options = {
-      rootMargin: "0px",
-      threshold: 0,
-    };
-
-    const intersectionCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!playAnimation) setPlayAnimation(true);
-          return;
-        }
-
-        if (playAnimation) setPlayAnimation(false);
-      });
-    };
-
-    const observer = new IntersectionObserver(intersectionCallback, options);
-    observer.observe(animationElementRef.current);
-  }, [animationElementRef.current, setPlayAnimation]);
-
-
+  const animationElementRef = useRef(null);
+  const playAnimation = useAnimation(animationElementRef);
+  
   return (
-    <svg width="288" height="224" viewBox="0 -21 288 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="absolute top-1/2 left-1/2 w-[77%] -translate-y-1/2 -translate-x-1/2" viewBox="0 -21 288 224" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_101_33)">
             <path
               d="M26.5497 2.84984C26.5497 2.28055 26.0682 1.82255 25.4696 1.82255C24.8711 1.82255 24.3895 2.28055 24.3895 2.84984V4.56198H22.5893C21.0006 4.56198 19.709 5.79045 19.709 7.30142V7.98628V10.0409V20.9986C19.709 22.5096 21.0006 23.738 22.5893 23.738H36.9909C38.5796 23.738 39.8712 22.5096 39.8712 20.9986V10.0409V7.98628V7.30142C39.8712 5.79045 38.5796 4.56198 36.9909 4.56198H35.1907V2.84984C35.1907 2.28055 34.7092 1.82255 34.1106 1.82255C33.512 1.82255 33.0305 2.28055 33.0305 2.84984V4.56198H26.5497V2.84984ZM21.8692 10.0409H37.711V20.9986C37.711 21.3753 37.387 21.6835 36.9909 21.6835H22.5893C22.1933 21.6835 21.8692 21.3753 21.8692 20.9986V10.0409Z"

@@ -85,8 +85,8 @@ const Nav = () => {
           >
             <NavLink close={closeSidebar} href="/">Home</NavLink>
             <NavLink close={closeSidebar} href="/blog">Blog</NavLink>
-            <NavLink close={closeSidebar} href="#">Sign In</NavLink>
-            <NavLink close={closeSidebar} href="#">Sign Up</NavLink>
+            <NavLink close={closeSidebar} href="https://app.budgetwarden.com">Sign In</NavLink>
+            <NavLink close={closeSidebar} href="https://app.budgetwarden.com/sign-up">Sign Up</NavLink>
           </nav>
           <button className="lg:hidden" ref={hamburgerBtnRef} onClick={openSidebar}>
             <HamburgerIcon className="pointer-events-none" width={40} height={40} />

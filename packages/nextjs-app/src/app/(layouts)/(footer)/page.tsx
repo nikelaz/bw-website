@@ -40,9 +40,9 @@ const Home = () => (
     <section className="py-10">
       <Container className="flex flex-col gap-10">
         <h2 className="text-40 font-bold tracking-tight">With Budget Warden You Will</h2>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-8 gap-y-8">
           <div className="flex flex-col gap-6">
-            <div className="flex justify-center items-center aspect-[16/10] bg-ash100 rounded-lg pointer-events-none">
+            <div className="flex justify-center items-center relative aspect-[16/10] bg-ash100 rounded-lg pointer-events-none">
               <CreateMonthlyBudgetsIllustration />
             </div>
             <div className="flex flex-col gap-3">
@@ -52,7 +52,7 @@ const Home = () => (
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="flex justify-center items-center aspect-[16/10] bg-ash100 rounded-lg pointer-events-none">
+            <div className="flex justify-center items-center relative aspect-[16/10] bg-ash100 rounded-lg pointer-events-none">
               <OrganizeYourFinancesIllustration />
             </div>
             <div className="flex flex-col gap-3">
@@ -62,7 +62,7 @@ const Home = () => (
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="flex justify-center items-center aspect-[16/10] bg-ash100 rounded-lg pointer-events-none">
+            <div className="flex justify-center items-center relative aspect-[16/10] bg-ash100 rounded-lg pointer-events-none">
               <VisualizeYourProgress />
             </div>
             <div className="flex flex-col gap-3">
@@ -82,7 +82,7 @@ const Home = () => (
             <p className="text-28">We have meticulously researched and analyzed various personal budgeting approaches to develop an app grounded in proven, effective methods.</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col gap-7">
             <PigIcon/>
             <div className="flex flex-col gap-3">

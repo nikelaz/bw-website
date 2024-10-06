@@ -6,7 +6,7 @@ type ContainerProps = Readonly<{
 }>;
 
 const Container = (props: ContainerProps) => (
-  <div className={clsx('max-w-screen-xl mx-auto px-3 md:px-4 lg:px-6', props.className)}>
+  <div className={clsx('max-w-screen-xl mx-auto px-5 lg:px-6', props.className)}>
     {props.children}
   </div>
 );

@@ -13,7 +13,7 @@ const FooterLink = (props: FooterLinkProps) => (
 const Footer = () => (
   <Container>
     <hr className="border-t-2 border-ash300" />
-    <footer className="flex justify-between py-10">
+    <footer className="flex flex-col sm:flex-row gap-4 justify-between py-10">
       <div className="text-20">&copy; Budget Warden 2024</div>
       <div>
         <nav className="flex gap-8">
