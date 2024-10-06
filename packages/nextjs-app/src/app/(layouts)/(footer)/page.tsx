@@ -7,7 +7,6 @@ import OrganizeYourFinancesIllustration from '@/app/(components)/illustrations/o
 import VisualizeYourProgress from '@/app/(components)/illustrations/visualize-your-progress';
 import PigIcon from '@/app/(components)/icons/pig-icon';
 import EnvelopeMoneyIcon from '@/app/(components)/icons/envelope-money-icon';
-import PreFooterSection from '@/app/(components)/prefooter';
 
 const Home = () => (
   <>
@@ -100,8 +99,6 @@ const Home = () => (
         </div>
       </Container>
     </section>
-
-    <PreFooterSection />
   </>
 );
 
