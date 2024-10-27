@@ -1,0 +1,32 @@
+.animScaleXBefore
+  transform-origin: left center
+  transform: scaleX(0)
+
+.animScaleX
+  animation: scaleX .4s ease-in-out forwards
+
+.animDelay1
+  animation-delay: 1.3s
+
+.animDelay2
+  animation-delay: 1.8s
+
+.animDelay3
+  animation-delay: 2.3s
+
+@keyframes scaleX
+  0%
+    transform: scaleX(0)
+  100%
+    transform: scaleX(1)
+
+@media only screen and (max-width: 768px)
+  .animDelay1
+    animation-delay: 0.4s
+
+  .animDelay2
+    animation-delay: 0.9s
+
+  .animDelay3
+    animation-delay: 1.4s
+
