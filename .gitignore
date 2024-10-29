@@ -2,3 +2,5 @@ pgdata
 .env
 node_modules
 .idea
+.next
+.DS_Store
