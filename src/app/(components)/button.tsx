@@ -7,17 +7,23 @@ export enum ButtonType {
   NextLink,
 }
 
+export enum ButtonSize {
+  Small = 1,
+}
+
 type ButtonProps = Readonly<{
   children: React.ReactNode,
   type?: ButtonType,
   className?: string,
   href?: string,
+  size?: ButtonSize,
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }>;
 
 const Button = (props: ButtonProps) => {
   const btnClassName = clsx(
-    'rounded-lg bg-prim hover:opacity-95 transition-opacity transition-scale text-white font-semibold inline-flex w-fit text-24 leading-4 py-3 outline-prim outline-offset-4 focus:outline-2 active:scale-[0.98]',
+    'rounded-lg bg-prim hover:opacity-95 h-min transition-opacity py-3 transition-scale text-white font-semibold inline-flex w-fit leading-4 outline-prim outline-offset-4 focus:outline-2 active:scale-[0.98]',
+    props.size === ButtonSize.Small ? 'text-20' : 'text-24',
     props.className
   );
 

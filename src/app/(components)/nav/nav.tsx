@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { clsx } from 'clsx';
 import HamburgerIcon from "@/app/(components)/icons/hamburger";
+import Button, { ButtonType, ButtonSize } from '../button';
 
 type NavLinkProps = Readonly<{
   children: React.ReactNode,
@@ -71,9 +72,11 @@ const Nav = () => {
   return (
     <header>
       <Container>
-        <div
-          className="flex items-center justify-between gap-10 py-4 lg:py-7">
-          <Logo/>
+        <div className="flex items-center justify-between gap-10 py-4 lg:py-7">
+          <Link href="/">
+            <Logo/>
+          </Link>
+            
           <nav
             ref={sidebarRef}
             className={clsx(
@@ -86,7 +89,7 @@ const Nav = () => {
             <NavLink close={closeSidebar} href="/">Home</NavLink>
             <NavLink close={closeSidebar} href="/blog">Blog</NavLink>
             <NavLink close={closeSidebar} href="https://app.budgetwarden.com">Sign In</NavLink>
-            <NavLink close={closeSidebar} href="https://app.budgetwarden.com/sign-up">Sign Up</NavLink>
+            <Button type={ButtonType.Anchor} href="https://app.budgetwarden.com/sign-up" className="px-8" size={ButtonSize.Small}>Sign Up</Button>
           </nav>
           <button className="lg:hidden" ref={hamburgerBtnRef} onClick={openSidebar}>
             <HamburgerIcon className="pointer-events-none" width={40} height={40} />
