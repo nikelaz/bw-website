@@ -18,11 +18,28 @@
         position: absolute
         left: 0.3em
 
-  ol
-    counter-reset: list
-    li::before
-      counter-increment: list
-      content: counter(list) "."
   
+  
+  ol, ul
+    li
+      margin-left: 1.19em
+      padding-left: .6em
+  
+  ol li
+    list-style-type: decimal
+
   ul li
     list-style-type: disc
+    &::marker
+      color: var(--color-ash900)
+  
+  strong
+    font-weight: 600
+  
+  figure
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 30px
+    background-color: var(--color-ash100)
+    border-radius: 0.5rem
