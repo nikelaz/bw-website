@@ -1,6 +1,6 @@
-import Nav from '../../(components)/nav/nav';
-import Footer from '../../(components)/footer';
-import Prefooter from '../../(components)/prefooter';
+import Nav from '@/components/nav/nav';
+import Footer from '@/components/footer';
+import Prefooter from '@/components/prefooter';
 
 type NavFooterLayoutProps = Readonly<{
   children: React.ReactNode,

@@ -1,5 +1,5 @@
-import Footer from '../../(components)/footer';
-import Prefooter from '../../(components)/prefooter';
+import Footer from '@/components/footer';
+import Prefooter from '@/components/prefooter';
 
 type FooterLayoutProps = Readonly<{
   children: React.ReactNode,

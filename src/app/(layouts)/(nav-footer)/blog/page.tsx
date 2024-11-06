@@ -1,9 +1,9 @@
-import Container from '../../../(components)/container';
+import Container from '@/components/container';
 import blogThumbnail from '../../../../data/debt-free-living-the-power-of-budgeting-and-saving.svg';
-import Card from '../../../(components)/card';
-import IconLabel from '../../../(components)/icon-label';
-import {IconType} from '../../../(components)/icon';
-import {getSortedPostsData} from '../../../../lib/posts.ts';
+import Card from '@/components/card';
+import IconLabel from '@/components/icon-label';
+import {IconType} from '@/components/icon';
+import {getSortedPostsData} from '../../../../lib/posts';
 import moment from 'moment';
 
 const Blog = async () => {

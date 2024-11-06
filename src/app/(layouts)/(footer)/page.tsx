@@ -1,12 +1,12 @@
-import Hero from '@/app/(components)/illustrations/hero';
-import Container from '@/app/(components)/container';
-import Button, {ButtonType} from '@/app/(components)/button';
-import Nav from '@/app/(components)/nav/nav';
-import CreateMonthlyBudgetsIllustration from '@/app/(components)/illustrations/create-monthly-budgets';
-import OrganizeYourFinancesIllustration from '@/app/(components)/illustrations/organize-your-finances';
-import VisualizeYourProgress from '@/app/(components)/illustrations/visualize-your-progress';
-import PigIcon from '@/app/(components)/icons/pig-icon';
-import EnvelopeMoneyIcon from '@/app/(components)/icons/envelope-money-icon';
+import Hero from '@/components/illustrations/hero';
+import Container from '@/components/container';
+import Button, {ButtonType} from '@/components/button';
+import Nav from '@/components/nav/nav';
+import CreateMonthlyBudgetsIllustration from '@/components/illustrations/create-monthly-budgets';
+import OrganizeYourFinancesIllustration from '@/components/illustrations/organize-your-finances';
+import VisualizeYourProgress from '@/components/illustrations/visualize-your-progress';
+import PigIcon from '@/components/icons/pig-icon';
+import EnvelopeMoneyIcon from '@/components/icons/envelope-money-icon';
 
 const Home = () => (
   <>

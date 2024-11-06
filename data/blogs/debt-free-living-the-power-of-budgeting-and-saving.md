@@ -56,8 +56,8 @@ summary: 'Debt can feel like a weight that’s hard to lift, but embracing a deb
 
 <figure>
   <div style="width: 100%; max-width: 360px">
-    <iframe aria-label="Donut Chart" id="datawrapper-chart-Nntuj" src="https://datawrapper.dwcdn.net/Nntuj/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="493" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-    </script>
+    <iframe aria-label="donut chart" src="https://datawrapper.dwcdn.net/Nntuj/1/" scrolling="no" frameborder="0" width="320" height="365" class="donut-chart"></iframe>
+    <style>@media screen and (max-width: 450px){.donut-chart{width:200px;height:245px}}</style>
   </div>
 </figure>
 

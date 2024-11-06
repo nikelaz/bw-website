@@ -1,17 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import remarkHtml from 'remark-html'
-import remarkParse from 'remark-parse'
-import {unified} from 'unified'
 
 const postsDirectory = path.join(process.cwd(), '/data/blogs');
+
+type Post = {
+  metadata: any,
+  content: string,
+};
 
 export async function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
 
-  const posts = [];
+  const posts: Post[] = [];
 
   fileNames.forEach(async (fileName) => {
     // Remove ".md" from file name to get slug
@@ -24,7 +26,7 @@ export async function getSortedPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    const contentHtml = matterResult.content;
+    let contentHtml = matterResult.content;
 
     // Combine the data with the slug
     posts.push({
@@ -39,7 +41,7 @@ export async function getSortedPostsData() {
 
   // Sort posts by date
   return posts.sort((a, b) => {
-    if (a.date < b.date) {
+    if (a.metadata.date < b.metadata.date) {
       return 1;
     } else {
       return -1;

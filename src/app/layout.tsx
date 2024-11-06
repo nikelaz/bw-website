@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { clsx } from 'clsx';
-import "./globals.sass";
+import './globals.sass';
 
 const inter = Inter({
   weight: 'variable',
@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Budget Warden",
+  title: 'Budget Warden',
 };
 
 type RootLayoutProps = Readonly<{
