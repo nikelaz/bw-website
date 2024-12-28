@@ -17,11 +17,13 @@ jobs:
           cd ~/bw-website-staging
           git pull --rebase
           rm -rf node_modules
+          nvm use 22
           npm install
           npm run build
   production:
     name: Production
     runs-on: ubuntu-latest
+    depends-on: staging
     environment: production
     steps:
     - name: remote into the ssh production server
@@ -35,5 +37,6 @@ jobs:
           cd ~/bw-website
           rm -rf node_modules
           git pull --rebase
+          nvm use 22
           npm install
           npm run build
