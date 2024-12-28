@@ -16,7 +16,7 @@ jobs:
         script: |
           ls
           whoami
-          source ~/.bashrc
+          source ~/.nvm/nvm.sh
           cd ~/bw-website-staging
           git pull --rebase
           rm -rf node_modules
@@ -40,7 +40,7 @@ jobs:
         script: |
           ls
           whoami
-          source ~/.bashrc
+          source ~/.nvm/nvm.sh
           cd ~/bw-website
           rm -rf node_modules
           git pull --rebase
