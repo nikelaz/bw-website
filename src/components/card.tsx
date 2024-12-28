@@ -28,7 +28,7 @@ type CardTitleProps = Readonly<{
 }>;
 
 Card.Title = (props: CardTitleProps) => {
-  const fontStyles = 'text-30 font-bold tracking-tight leading-6';
+  const fontStyles = 'text-28 md:text-30 font-bold tracking-tight leading-6';
   const linkStyles = 'text-prim hover:opacity-90 transition-opacity';
 
   if (!props.href) {
@@ -45,7 +45,7 @@ Card.Title = (props: CardTitleProps) => {
 };
 
 Card.Description = (props: GenericChildrenProps) => (
-  <div className="text-26 leading-6">{props.children}</div>
+  <div className="text-24 md:text-26 leading-6">{props.children}</div>
 );
 
 export default Card;

@@ -22,7 +22,7 @@ type ButtonProps = Readonly<{
 
 const Button = (props: ButtonProps) => {
   const btnClassName = clsx(
-    'rounded-lg bg-prim hover:opacity-95 h-min transition-opacity py-3 transition-scale text-white font-semibold inline-flex w-fit leading-4 outline-prim outline-offset-4 focus:outline-2 active:scale-[0.98]',
+    'rounded-lg bg-prim hover:opacity-95 h-min transition-opacity py-3 justify-center transition-scale text-white font-semibold inline-flex w-fit leading-4 outline-prim outline-offset-4 focus:outline-2 active:scale-[0.98]',
     props.size === ButtonSize.Small ? 'text-20' : 'text-24',
     props.className
   );

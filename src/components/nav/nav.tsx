@@ -7,7 +7,8 @@ import styles from './nav.module.sass';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { clsx } from 'clsx';
-import HamburgerIcon from "@/components/icons/hamburger";
+import HamburgerIcon from '@/components/icons/hamburger';
+import XmarkIcon from '../icons/xmark';
 import Button, { ButtonType, ButtonSize } from '../button';
 
 type NavLinkProps = Readonly<{
@@ -72,8 +73,8 @@ const Nav = () => {
   return (
     <header>
       <Container>
-        <div className="flex items-center justify-between gap-10 py-4 lg:py-7">
-          <Link href="/">
+        <div className="flex items-center justify-between gap-10 py-7">
+          <Link href="/" aria-label='budget warden logo (go to homepage)'>
             <Logo/>
           </Link>
             
@@ -82,17 +83,20 @@ const Nav = () => {
             className={clsx(
               isOpen && styles.open,
               'transition-transform',
-              'translate-x-full fixed right-0 top-0 w-40 h-screen py-6 bg-ash100 shadow-xl flex flex-col gap-5 font-medium text-20',
+              'translate-x-full fixed right-0 top-0 w-40 h-screen py-6 bg-ash100 shadow-xl flex flex-col gap-5 font-medium text-20 min-w-[280px] z-50',
               'lg:relative lg:h-auto lg:w-auto lg:bg-transparent lg:shadow-none lg:gap-10 lg:flex-row lg:translate-x-0'
             )}
           >
+            <button className="lg:hidden flex px-5 justify-end" onClick={closeSidebar} aria-label="close navigation">
+              <XmarkIcon className="pointer-events-none" width={32} height={32} />
+            </button>
             <NavLink close={closeSidebar} href="/">Home</NavLink>
             <NavLink close={closeSidebar} href="/blog">Blog</NavLink>
             <NavLink close={closeSidebar} href="https://app.budgetwarden.com">Sign In</NavLink>
-            <Button type={ButtonType.Anchor} href="https://app.budgetwarden.com/sign-up" className="px-8" size={ButtonSize.Small}>Sign Up</Button>
+            <Button type={ButtonType.Anchor} href="https://app.budgetwarden.com/sign-up" className="px-8 mx-5 w-[-webkit-fill-available] lg:mx-0 lg:w-auto" size={ButtonSize.Small}>Sign Up</Button>
           </nav>
-          <button className="lg:hidden" ref={hamburgerBtnRef} onClick={openSidebar}>
-            <HamburgerIcon className="pointer-events-none" width={40} height={40} />
+          <button className="lg:hidden" ref={hamburgerBtnRef} onClick={openSidebar} aria-label="open navigation">
+            <HamburgerIcon className="pointer-events-none" width={32} height={32} />
           </button>
         </div>
       </Container>

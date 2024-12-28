@@ -11,8 +11,8 @@ const Blog = async () => {
 
   return (
     <Container>
-      <div className="flex flex-col gap-10 mb-10">
-        <h1 className="text-40 font-bold">Blog</h1>
+      <div className="flex flex-col gap-6 mb-6 md:gap-10 md:mb-10">
+        <h1 className="text-30 md:text-40 font-bold">Blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 2xl:gap-12">
           {posts.map(blogPost => (
             <Card key={blogPost.metadata.slug}>

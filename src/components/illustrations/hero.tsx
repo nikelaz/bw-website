@@ -1,5 +1,5 @@
 const Hero = () => (
-  <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487 448" width="487" height="448">
+  <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487 448" width="487" height="448" className="hidden md:block mt-auto">
     <path fill="#ebebeb" d="m443.4 424.1h41.6v-15.7h-41.6z"/>
     <path fill="#03318b" d="m356.1 409.1h130.6v-3.3h-130.6z"/>
     <path fill="#03318b" d="m356.1 426.7h130v-3.3h-130z"/>
