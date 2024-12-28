@@ -19,9 +19,10 @@ jobs:
           source ~/.nvm/nvm.sh
           cd ~/bw-website-staging
           git pull --rebase
-          rm -rf node_modules
           nvm use 22
           node -v
+          rm -rf node_modules
+          rm -rf out
           npm install
           npm run build
   production:
@@ -42,9 +43,10 @@ jobs:
           whoami
           source ~/.nvm/nvm.sh
           cd ~/bw-website
-          rm -rf node_modules
           git pull --rebase
           nvm use 22
           node -v
+          rm -rf node_modules
+          rm -rf out
           npm install
           npm run build
