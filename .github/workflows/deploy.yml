@@ -18,7 +18,7 @@ jobs:
           whoami
           source ~/.nvm/nvm.sh
           cd ~/bw-website-staging
-          git pull --rebase
+          git pull --force
           nvm use 22
           node -v
           rm -rf node_modules
@@ -43,7 +43,7 @@ jobs:
           whoami
           source ~/.nvm/nvm.sh
           cd ~/bw-website
-          git pull --rebase
+          git pull --force
           nvm use 22
           node -v
           rm -rf node_modules
