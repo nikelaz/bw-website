@@ -23,7 +23,7 @@ jobs:
   production:
     name: Production
     runs-on: ubuntu-latest
-    depends-on: staging
+    needs: [staging]
     environment: production
     steps:
     - name: remote into the ssh production server
