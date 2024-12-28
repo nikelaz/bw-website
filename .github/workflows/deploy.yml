@@ -16,10 +16,12 @@ jobs:
         script: |
           ls
           whoami
+          source ~/.bashrc
           cd ~/bw-website-staging
           git pull --rebase
           rm -rf node_modules
           nvm use 22
+          node -v
           npm install
           npm run build
   production:
@@ -38,9 +40,11 @@ jobs:
         script: |
           ls
           whoami
+          source ~/.bashrc
           cd ~/bw-website
           rm -rf node_modules
           git pull --rebase
           nvm use 22
+          node -v
           npm install
           npm run build
