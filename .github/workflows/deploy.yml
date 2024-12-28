@@ -14,6 +14,8 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
+          ls
+          whoami
           cd ~/bw-website-staging
           git pull --rebase
           rm -rf node_modules
