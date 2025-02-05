@@ -1,5 +1,3 @@
-import IconLabel from '@/components/icon-label';
-import {IconType} from '@/components/icon';
 import Container from '@/components/container';
 
 const PrivacyPolicyMobileApp = async (props: any) => {
